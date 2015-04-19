@@ -6,11 +6,11 @@ module.exports = function(gulp) {
     livereload.listen();
 
     watch(gulp.config.source + '/styles/**/*.less', function() {
-      gulp.start('less');
+      gulp.start('styles');
     });
 
     watch(gulp.config.source + '/js/**/*.js', function() {
-      gulp.start('browserify');
+      gulp.start('scripts');
     });
 
     watch([
@@ -23,7 +23,7 @@ module.exports = function(gulp) {
     });
 
     watch(gulp.config.source + '/views/**/*.jade', function() {
-      gulp.start('jade');
+      gulp.start('templates');
     });
 
     watch(gulp.config.source + '/img/**/*.{png,gif,jpg,jpeg,svg}', function() {

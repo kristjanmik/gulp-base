@@ -5,7 +5,7 @@ var minifyCSS = require('gulp-minify-css');
 module.exports = function(gulp, gutil) {
   var prod = gutil.env.prod;
 
-  gulp.task('less', function() {
+  gulp.task('styles', function() {
     return gulp.srcWithErrorHandling(gulp.config.source + '/styles/**/*.less')
       .pipe(less({
         paths: [
